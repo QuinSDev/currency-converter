@@ -48,6 +48,6 @@ public class Main {
 
         }  while (option != 7);
 
-        System.out.println("Gracias por usar nuestra conversor de monedas.");
+        System.out.println("Gracias por usar nuestro conversor de monedas.");
     }
 }
