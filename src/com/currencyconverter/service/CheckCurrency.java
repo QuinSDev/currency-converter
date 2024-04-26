@@ -1,5 +1,6 @@
 package com.currencyconverter.service;
 
+import com.currencyconverter.module.ApiKey;
 import com.currencyconverter.module.Currency;
 import com.google.gson.Gson;
 
@@ -12,6 +13,7 @@ import java.util.HashMap;
 public class CheckCurrency {
     private String targetCurrency;
     private String currentCurrency;
+    ApiKey apiKey = new ApiKey();
 
     public Currency optionCurrency(int option) {
 
@@ -50,7 +52,7 @@ public class CheckCurrency {
     }
 
     public Currency searchCurrency(String currency) {
-        URI address = URI.create("https://v6.exchangerate-api.com/v6/e45175d35e1feaeca801e594/latest/"+currency);
+        URI address = URI.create("https://v6.exchangerate-api.com/v6/"+ apiKey.getApiKey() + "/latest/"+currency);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
