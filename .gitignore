@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+## Clase API_KEY ##
+src/main/java/com/currencyconverter/module/ApiKey.java
