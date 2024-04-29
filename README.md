@@ -13,7 +13,7 @@ Este repositorio es un <strong>conversor de moneda</strong> que te permite calcu
 ## 📁 Acceso al proyecto
 Para poder utilizar la aplicación del conversor de moneda se debe de tener instalada el <strong>[JDK Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)</strong>, y un IDE de su preferencia <strong>([Intellij Idea](https://www.jetbrains.com/idea/download/?section=windows), [Netbeans](https://netbeans.apache.org/front/main/download/))</strong>
 <br><br>
-Luego de haber instalado Java 17 y el IDE continue con la descarga del proyecto [Aquí]() o haga un clone del repositorio:
+Luego de haber instalado Java 17 y el IDE continue con la descarga del proyecto [Aquí](https://github.com/QuinSDev/currency-converter/files/15155141/currency-converter-main.zip) o haga un clone del repositorio:
 
 ```sh
 git clone https://github.com/QuinSDev/currency-converter.git
