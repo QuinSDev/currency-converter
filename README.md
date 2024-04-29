@@ -21,8 +21,8 @@ git clone https://github.com/QuinSDev/currency-converter.git
 
 Luego, para ejecutar correctamente la aplicación debemos usar la <strong>biblioteca Gson</strong> y tener la <strong>API Key de ExchangeRate API</strong>(o una API de su preferencia). A continucación dejó las guía de ambas:
 
-- [Guía Gson]()
-- [Guía API Key]()
+- [Guía Gson](https://github.com/QuinSDev/currency-converter/blob/main/Gson.md)
+- [Guía API Key](https://github.com/QuinSDev/currency-converter/blob/main/ApiKey.md)
 
 ## 🛠️ Abre y ejecuta el proyecto
 Si descargaste el proyecto en .zip desberás descomprimirlo antes de poder buscar y abrir el proyecto. Si lo clonaste solo busca el proyecto y abrelo.
