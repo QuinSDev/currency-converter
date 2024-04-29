@@ -2,7 +2,7 @@
 
 ## ⬇️ Descarga del jar Gson
 
-Para comenzar deberemos descargar la biblioteca de Gson, en la barra de busqueda de Google colocaremos <strong>maven repository</strong>. Le daremos <strong>click</strong> a la primera opción que nos aparece
+Para comenzar deberemos descargar la biblioteca de Gson, en la barra de busqueda de Google colocaremos <strong>maven repository</strong>. Le daremos <strong>click</strong> a la primera opción que nos aparece.
 
 ![mave-repository](https://github.com/QuinSDev/currency-converter/assets/132032504/fe352d08-30c8-45cf-84d8-3112381192c3)
 
