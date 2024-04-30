@@ -3,6 +3,8 @@ package com.currencyconverter.service;
 import com.currencyconverter.module.ApiKey;
 import com.currencyconverter.module.Currency;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -52,7 +54,7 @@ public class CheckCurrency {
     }
 
     public Currency searchCurrency(String currency) {
-        URI address = URI.create("https://v6.exchangerate-api.com/v6/"+ apiKey.getApiKey() + "/latest/"+currency);
+        URI address = URI.create("https://v6.exchangerate-api.com/v6/" + apiKey.getApiKey() + "/latest/"+currency);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -62,9 +64,24 @@ public class CheckCurrency {
         try {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-            return new Gson().fromJson(response.body(), Currency.class);
+
+            // Analizar la respuesta del cuerpo de la API
+            JsonObject jsonResponse = new JsonParser().parse(response.body()).getAsJsonObject();
+
+            if (jsonResponse.get("result").getAsString().equals("error")) {
+                String errorType = jsonResponse.get("error-type").getAsString();
+                if (errorType.equals("invalid-key")) {
+                    throw new RuntimeException("La API Key proporcionada no es válida: " + errorType);
+                } else if (errorType.equals("unsupported-code")) {
+                    throw new RuntimeException("La moneda proporcionada no es válida: " + errorType);
+                } else {
+                    throw new RuntimeException("Error al realizar la solicitud: " + errorType);
+                }
+            } else {
+                return new Gson().fromJson(response.body(), Currency.class);
+            }
         } catch (Exception e) {
-            throw new RuntimeException("No se encontro la moneda a convertir" + e.getMessage());
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -76,8 +93,7 @@ public class CheckCurrency {
             String formattedAmount = String.format("%.2f", convertedAmount);
             System.out.println("El valor " + formattedValor + " [" + currentCurrency + "] corresponde" +
                     " al valor final de ==>> " + formattedAmount + " [" + targetCurrency + "]");
-            System.out.println("" +
-                    "");
+            System.out.println("");
         } else {
             throw new RuntimeException("No se encontró la tasa de cambio para " + targetCurrency);
         }
