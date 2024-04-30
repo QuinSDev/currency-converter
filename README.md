@@ -7,7 +7,8 @@ Este repositorio es un <strong>conversor de moneda</strong> que te permite calcu
 - `3. Tasas de cambio en tiempo real:` Utiliza una fuente confiable(como la API <strong>ExchangeRate API</strong>) para obtener tasas de cambio actualizadas. Esto garantiza que las conversiones reflejen las condiciones del mercado en el momento de la consulta.
 - `4. Manejo de errores:` La aplicación maneja situaciones inesperadas, como entradas no válidas. Proporciona mensajes de errores claros para guiar al usuario.
 
-![Video_240427182507](https://github.com/QuinSDev/currency-converter/assets/132032504/88d0aedf-185e-444b-b063-2bb1d5ca926a)
+![ConversorMoneda](https://github.com/QuinSDev/currency-converter/assets/132032504/1f3cf1ba-7b45-419b-aadb-a623453fa723)
+
 
 
 ## 📁 Acceso al proyecto
